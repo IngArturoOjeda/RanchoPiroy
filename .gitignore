@@ -1,0 +1,29 @@
+# Archivos compilados de FoxPro
+*.exe
+*.app
+*.fxp
+
+# Archivos de proyecto que se regeneran
+*.pjx
+*.pjt
+
+# Archivos temporales / backups
+*.bak
+*.tmp
+*.err
+
+# Logs
+*.log
+
+# Configuración local (no compartir claves de DB)
+.env
+config.ini
+
+# Carpetas de editores
+.vscode/
+.idea/
+
+# Archivos DBF si no los quieres versionar
+*.dbf
+*.fpt
+*.cdx

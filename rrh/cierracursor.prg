@@ -1,0 +1,7 @@
+ LPARAMETERS x
+ IF USED('&x')  
+    SELECT &x
+    USE
+ ENDIF
+ENDPROC
+**
