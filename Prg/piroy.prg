@@ -29,7 +29,7 @@ _screen.Caption="VETERINARIA"
 _screen.Icon="C:\Sistemapiroy\imagenes\rancho.ico"
 
 *coneccion='Driver={SQL Server};Server=.\;trusted_connection=No;uid=sa;pwd=manager123*;Database=piroy'	
- coneccion='Driver={SQL Server};Server=192.168.40.153;trusted_connection=No;uid=sa;pwd=manager123*;Database=piroy'	
+ coneccion='Driver={SQL Server};Server=192.168.100.49;trusted_connection=No;uid=sa;pwd=manager123*;Database=piroy'	
 
 DO FORM accesodominio
 conectar()
@@ -69,7 +69,7 @@ IF v_bien = 0
   _screen.AddObject("olmg","image")
    _screen.olmg.picture = varmilogo
    _screen.olmg.visible = .T.
-   _screen.olmg.stretch = 0
+   _screen.olmg.stretch = 2
    _screen.olmg.left = 90
    _screen.olmg.width = 1300
    _screen.olmg.top = 120
