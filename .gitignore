@@ -18,6 +18,12 @@
 # Configuración local (no compartir claves de DB)
 .env
 config.ini
+piroy.cfg
+
+# Archivos con credenciales o datos sensibles
+Notas/password.txt
+Notas/password2.prn
+Notas/id.txt
 
 # Carpetas de editores
 .vscode/

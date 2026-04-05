@@ -1,5 +1,6 @@
  PUBLIC v_tol, v_bien, v_nom, v_dir, v_ruc, v_tel, v_npat, v_act, v_raz, v_ciu, v_c, v_al,gncone,coneccion,magente,conesenal
 SET PROCEDURE TO seguridad.prg ADDITIVE
+SET PROCEDURE TO Prg\leer_config.prg ADDITIVE
 DO permisos.prg
 public a as character
 
@@ -29,9 +30,10 @@ SET LIBRARY TO CIPHER50.FLL ADDITIVE
 _screen.Caption="VETERINARIA"
 _screen.Icon="C:\Sistemapiroy\imagenes\rancho.ico"
 
-*coneccion='Driver={SQL Server};Server=.\;trusted_connection=No;uid=sa;pwd=manager123*;Database=piroy'	
-*coneccion='Driver={SQL Server};Server=192.168.100.49;trusted_connection=No;uid=sa;pwd=manager123*;Database=piroy'	
-coneccion='Driver={SQL Server};Server=.\;trusted_connection=No;uid=PiroyApp;pwd=PiroyApp;Database=piroy'	
+coneccion = LeerConexion()
+IF EMPTY(coneccion)
+    QUIT
+ENDIF
 DO FORM accesodominio
 conectar()
 IF v_bien = 0

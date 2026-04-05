@@ -1,4 +1,4 @@
-USE [ferreteria]
+USE [piroy]
 GO
 
 /****** Object:  Table [seguridad].[rol_permiso]    Script Date: 04-Apr-26 4:39:42 PM ******/

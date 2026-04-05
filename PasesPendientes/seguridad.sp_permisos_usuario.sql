@@ -1,4 +1,4 @@
-USE [ferreteria]
+USE [piroy]
 GO
 
 /****** Object:  StoredProcedure [seguridad].[sp_permisos_usuario]    Script Date: 04-Apr-26 6:19:51 PM ******/

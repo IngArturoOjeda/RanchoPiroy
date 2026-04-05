@@ -9,7 +9,7 @@ FUNCTION CargarPermisos(tcUsuario)
  IF USED("curPermisos")
     USE IN curPermisos
  ENDIF
- MESSAGEBOX('El codigo de usuario: '+STR(tcUsuario))
+ *MESSAGEBOX('El codigo de usuario: '+STR(tcUsuario))
   conectar() 
    IF SQLEXEC(gncone,'execute seguridad.sp_permisos_usuario ?tcUsuario','curPermisos') < 0
       MESSAGEBOX("Error cargando permisos")
