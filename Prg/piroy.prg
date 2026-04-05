@@ -1,5 +1,6 @@
  PUBLIC v_tol, v_bien, v_nom, v_dir, v_ruc, v_tel, v_npat, v_act, v_raz, v_ciu, v_c, v_al,gncone,coneccion,magente,conesenal
-
+SET PROCEDURE TO seguridad.prg ADDITIVE
+DO permisos.prg
 public a as character
 
 a = sys(5)+sys(2003)
@@ -29,8 +30,8 @@ _screen.Caption="VETERINARIA"
 _screen.Icon="C:\Sistemapiroy\imagenes\rancho.ico"
 
 *coneccion='Driver={SQL Server};Server=.\;trusted_connection=No;uid=sa;pwd=manager123*;Database=piroy'	
- coneccion='Driver={SQL Server};Server=192.168.100.49;trusted_connection=No;uid=sa;pwd=manager123*;Database=piroy'	
-
+*coneccion='Driver={SQL Server};Server=192.168.100.49;trusted_connection=No;uid=sa;pwd=manager123*;Database=piroy'	
+coneccion='Driver={SQL Server};Server=.\;trusted_connection=No;uid=PiroyApp;pwd=PiroyApp;Database=piroy'	
 DO FORM accesodominio
 conectar()
 IF v_bien = 0

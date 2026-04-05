@@ -5,6 +5,7 @@
  SELECT usua
  LOCATE ALL FOR usuario=v_usu
  IF FOUND()
+	 codiusu = cod_usu
     *usudpto = dpto
     *IF (v_compu='INFORMATICA2' .OR. v_compu='LUCIA' .OR. v_compu='PCINFORMATICA' .OR. v_compu='DAVID') .AND. (v_usu='LNOGUERA' .OR. v_usu='DIEGO' .OR. v_usu='ACANO')
      *  usudpto = usu_dpto
@@ -68,6 +69,9 @@
        SELECT m1
     ENDSCAN
     CLOSE TABLE ALL
+    
+    CargarPermisos(codiusu) 
+       
     DELETE FILE menu.dbf
 *!*	    vce=0
 *!*	     conectar()
